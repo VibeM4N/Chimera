@@ -1,0 +1,23 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="chimera" x1="8" y1="8" x2="56" y2="56">
+      <stop offset="0%" stop-color="#67E8F9"></stop>
+      <stop offset="100%" stop-color="#22D3EE"></stop>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer C -->
+  <path d="M32 10
+       C20 10 10 20 10 32
+       C10 44 20 54 32 54
+       C39 54 45 51 50 46" stroke="url(#chimera)" stroke-width="7" stroke-linecap="round"></path>
+
+  <!-- Inner Interlocking C -->
+  <path d="M32 18
+       C24 18 18 24 18 32
+       C18 40 24 46 32 46
+       C37 46 41 44 44 41" stroke="url(#chimera)" stroke-width="7" stroke-linecap="round"></path>
+
+  <!-- Connection Stroke -->
+  <path d="M44 23 L52 23" stroke="url(#chimera)" stroke-width="7" stroke-linecap="round"></path>
+</svg>

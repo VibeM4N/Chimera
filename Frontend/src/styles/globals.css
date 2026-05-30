@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-base text-base font-inter;
+    background-color: #0b1120; /* fallback to dark background to avoid white flash during route transitions */
+  }
+
+  html.dark {
+    @apply bg-base-dark text-base-dark;
+    background-color: #0b1120;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-[12px] font-medium transition-all duration-300 gap-2;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-dark shadow-md hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-white hover:opacity-90 shadow-md hover:shadow-lg;
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-white;
+  }
+
+  .btn-sm {
+    @apply px-4 py-2 text-sm;
+  }
+
+  .card {
+    @apply bg-secondary dark:bg-secondary-dark border border-base dark:border-base-dark rounded-[12px] p-6 shadow-md hover:shadow-lg transition-all duration-300;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+  }
+
+  .badge-success {
+    @apply bg-success/10 text-success;
+  }
+
+  .badge-warning {
+    @apply bg-warning/10 text-warning;
+  }
+
+  .badge-danger {
+    @apply bg-danger/10 text-danger;
+  }
+
+  .form-input {
+    @apply w-full px-4 py-2 border-2 border-base dark:border-base-dark rounded-[12px] bg-base dark:bg-secondary-dark text-base dark:text-base-dark focus:border-primary focus:outline-none focus:ring-4 focus:ring-primary/20 transition-all duration-300;
+  }
+
+  .form-input-error {
+    @apply border-danger focus:border-danger focus:ring-danger/20;
+  }
+
+  .form-group {
+    @apply mb-6;
+  }
+
+  .form-label {
+    @apply block mb-2 font-medium text-base;
+  }
+
+  .form-error {
+    @apply text-danger text-sm mt-2;
+  }
+}
+
+/* Smooth transitions */
+* {
+  @apply transition-colors duration-300;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-secondary dark:bg-secondary-dark;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary rounded-full hover:bg-primary-dark;
+}
+
+/* Home page scrollbar theme */
+body.home-scrollbar::-webkit-scrollbar-track {
+  background: #0b1120;
+}
+
+body.home-scrollbar::-webkit-scrollbar-thumb {
+  background: #38bdf8;
+  border-radius: 9999px;
+}
+
+body.home-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #22d3ee;
+}
+
+/* Dark mode transitions */
+html {
+  @apply transition-colors duration-300;
+}
+
+
